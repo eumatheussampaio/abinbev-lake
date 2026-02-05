@@ -140,18 +140,26 @@ The DAG was configured with task dependencies, retries, and failure notification
 ---
 
 ### Fig. 03 - DAG
-![dag.png](./Img/)
+![dag.png](./Img/dataflow.png)
 
+
+>> Databricks Asset Bundles can be used as an alternative to CI/CD in JOBS.
+[Databricks Asset Bundles](https://docs.databricks.com/aws/en/dev-tools/bundles/)
+
+In the DAG folder, there is an _example-dag.yaml_ file, which is the job file.
 
 ---
 
-### Fig. 04 - Monitoring
-![monitoring.png](./Img/fig04.png)
+### Fig. 04 - Monitoring (Email notifications)
+![monitoring](./Img/notifications.png)
 
-Example of how retry and alerts work.
+_Email was used, but Databricks offers others such as Slack, Teams, webhooks, etc._
 
-![./Img/fig05.png](./Img/fig05.png)
-![./Img/fig06.png](./Img/fig06.png)
+### Fig. 05 - Error Notebook
+![Error Notebook](./Img/error-notebook.png)
+
+### Fig. 06 - Error Pipeline
+![Error Pipeline](./Img/dataflow-error.png)
 
 ---
 
@@ -161,4 +169,5 @@ Example of how retry and alerts work.
 - Medallion Architecture to enforce separation of responsibilities
 - Focus on simplicity and clarity over excessive abstraction
 - Pipeline designed for future evolution (new data sources and domains)
+- For better security, notebooks point to git, and all version control requires opening a PR
 - Databricks used as a unified platform for **Data Engineering, Analytics, and Data Science**
